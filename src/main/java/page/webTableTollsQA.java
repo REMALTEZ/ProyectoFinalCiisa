@@ -109,105 +109,105 @@ public class webTableTollsQA {
             }
 
 
-                boolean add = metodosGenericos.visualizarObjeto(BotonADD, 10);
-                if (add) {
-                    BotonADD.click();
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza click ADD de web table");
+            boolean add = metodosGenericos.visualizarObjeto(BotonADD, 10);
+            if (add) {
+                BotonADD.click();
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza click ADD de web table");
 
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar click ADD de web table");
-
-                }
-
-
-                boolean name = metodosGenericos.visualizarObjeto(txtFullNameWT, 10);
-                if (name) {
-                    txtFullNameWT.sendKeys(fullName);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza click ADD de web table");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar click ADD de web table");
-
-                }
-
-                boolean lasname = metodosGenericos.visualizarObjeto(txtLastNameWT, 10);
-                if (lasname) {
-                    txtLastNameWT.sendKeys(lastName);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza Ingreso de last Name");
-
-                } else {
-                    System.out.println("No es  Posible realizar Ingreso de last Name");
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                }
-
-                boolean temail = metodosGenericos.visualizarObjeto(txtEmailWT, 10);
-                if (temail) {
-                    txtEmailWT.sendKeys(email);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza Ingreso Email");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar Ingreso de Email");
-
-                }
-
-                boolean tedad = metodosGenericos.visualizarObjeto(txtEdad, 10);
-                if (tedad) {
-                    txtEdad.sendKeys(edad);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza Ingreso EDAD");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar Ingreso de EDAD");
-
-                }
-
-
-                boolean tsalario = metodosGenericos.visualizarObjeto(txtSalario, 10);
-                if (tsalario) {
-                    txtSalario.sendKeys(salario);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza Ingreso Salario");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar Ingreso de Salario");
-
-                }
-
-                boolean tdepardatmento = metodosGenericos.visualizarObjeto(txtDepartamento, 10);
-                if (tdepardatmento) {
-                    txtDepartamento.sendKeys(departamento);
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza Ingreso Departamento");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar Ingreso de Departamento");
-
-                }
-
-                boolean btnsumit = metodosGenericos.visualizarObjeto(BotonSumitWT, 10);
-                if (btnsumit) {
-                    BotonSumitWT.submit();
-                    addWebReportImage("text Box ", "text box", Status.PASS, false);
-                    System.out.println("Se realiza click Sumit Web Tables");
-
-                } else {
-                    addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
-                    System.out.println("No es  Posible realizar click Menu Lateral Web Table");
-
-                }
-
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar click ADD de web table");
 
             }
+
+
+            boolean name = metodosGenericos.visualizarObjeto(txtFullNameWT, 10);
+            if (name) {
+                txtFullNameWT.sendKeys(fullName);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza click ADD de web table");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar click ADD de web table");
+
+            }
+
+            boolean lasname = metodosGenericos.visualizarObjeto(txtLastNameWT, 10);
+            if (lasname) {
+                txtLastNameWT.sendKeys(lastName);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza Ingreso de last Name");
+
+            } else {
+                System.out.println("No es  Posible realizar Ingreso de last Name");
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+            }
+
+            boolean temail = metodosGenericos.visualizarObjeto(txtEmailWT, 10);
+            if (temail) {
+                txtEmailWT.sendKeys(email);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza Ingreso Email");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar Ingreso de Email");
+
+            }
+
+            boolean tedad = metodosGenericos.visualizarObjeto(txtEdad, 10);
+            if (tedad) {
+                txtEdad.sendKeys(edad);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza Ingreso EDAD");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar Ingreso de EDAD");
+
+            }
+
+
+            boolean tsalario = metodosGenericos.visualizarObjeto(txtSalario, 10);
+            if (tsalario) {
+                txtSalario.sendKeys(salario);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza Ingreso Salario");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar Ingreso de Salario");
+
+            }
+
+            boolean tdepardatmento = metodosGenericos.visualizarObjeto(txtDepartamento, 10);
+            if (tdepardatmento) {
+                txtDepartamento.sendKeys(departamento);
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza Ingreso Departamento");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar Ingreso de Departamento");
+
+            }
+
+            boolean btnsumit = metodosGenericos.visualizarObjeto(BotonSumitWT, 10);
+            if (btnsumit) {
+                BotonSumitWT.submit();
+                addWebReportImage("text Box ", "text box", Status.PASS, false);
+                System.out.println("Se realiza click Sumit Web Tables");
+
+            } else {
+                addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.FAIL, false);
+                System.out.println("No es  Posible realizar click Menu Lateral Web Table");
+
+            }
+
+
+        }
         boolean button = metodosGenericos.visualizarObjeto(botonFlechaSube, 10);
         if (button) {
             botonFlechaSube.click();
@@ -220,10 +220,9 @@ public class webTableTollsQA {
 
         }
 
-
     }
 
-    }
+}
 
 
 

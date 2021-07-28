@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.metodosGenericos;
 
+
+
 import static utils.HtmlReport.addWebReportImage;
 
 public class checkboxTollsQA {
@@ -20,17 +22,17 @@ public class checkboxTollsQA {
     }
 
 
-
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]")
+    @FindBy (id = "item-1")
     private WebElement botonCheckbox;
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/span[1]/button[1]")
+    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/button[1]")
     private WebElement btonMasCheckbox;
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/span[1]/label[1]/span[1]")
-    private WebElement seleccionCheckBox;
+    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/label[1]/span[3]")
+    private WebElement seleccionDesktop;
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[1]/span[1]/button[1]")
+
+    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]")
     private WebElement FlechaAbajoExpandeUno;
 
     @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/ol[1]/li[1]/ol[1]/li[2]/span[1]/button[1]")
@@ -45,7 +47,8 @@ public class checkboxTollsQA {
 
     public void checkBox(){
 
-        boolean menucheck = metodosGenericos.visualizarObjeto(botonCheckbox, 10);
+        boolean menucheck = metodosGenericos.visualizarObjeto(botonCheckbox, 5);
+
         if (menucheck) {
             botonCheckbox.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -61,7 +64,7 @@ public class checkboxTollsQA {
 
     public void formularioCheckbox(){
 
-        boolean btnmas = metodosGenericos.visualizarObjeto(btonMasCheckbox, 10);
+        boolean btnmas = metodosGenericos.visualizarObjeto(btonMasCheckbox, 5);
         if (btnmas) {
             btonMasCheckbox.click();
             System.out.println("Se realiza click en + que expande el arbol del checkbox");
@@ -72,9 +75,9 @@ public class checkboxTollsQA {
 
         }
 
-        boolean seleccheck = metodosGenericos.visualizarObjeto(seleccionCheckBox, 10);
+        boolean seleccheck = metodosGenericos.visualizarObjeto(seleccionDesktop, 5);
         if (seleccheck) {
-            seleccionCheckBox.click();
+            seleccionDesktop.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
             System.out.println("Se realiza click Seleccionador que expande el arbol del checkbox");
 
@@ -84,7 +87,7 @@ public class checkboxTollsQA {
 
         }
 
-        boolean expandeUno = metodosGenericos.visualizarObjeto(FlechaAbajoExpandeUno, 10);
+        boolean expandeUno = metodosGenericos.visualizarObjeto(FlechaAbajoExpandeUno, 5);
         if (expandeUno) {
             FlechaAbajoExpandeUno.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -96,7 +99,7 @@ public class checkboxTollsQA {
 
         }
 
-        boolean expandeDos = metodosGenericos.visualizarObjeto(FlechaAbajoExpandeDos, 10);
+        boolean expandeDos = metodosGenericos.visualizarObjeto(FlechaAbajoExpandeDos, 5);
         if (expandeDos) {
             FlechaAbajoExpandeDos.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -108,7 +111,7 @@ public class checkboxTollsQA {
 
         }
 
-        boolean btnMas = metodosGenericos.visualizarObjeto(BotonMas, 10);
+        boolean btnMas = metodosGenericos.visualizarObjeto(BotonMas, 5);
         if (btnMas) {
             BotonMas.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -120,7 +123,7 @@ public class checkboxTollsQA {
 
         }
 
-        boolean btnMenos = metodosGenericos.visualizarObjeto(BotonMenos, 10);
+        boolean btnMenos = metodosGenericos.visualizarObjeto(BotonMenos, 5);
         if (btnMenos) {
             BotonMenos.click();
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -134,5 +137,5 @@ public class checkboxTollsQA {
     }
 
 
-    }
+}
 

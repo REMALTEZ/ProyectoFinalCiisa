@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import org.testng.annotations.Test;
 import utils.metodosGenericos;
 
 import static reportePdf.ImedReports.reporteObjetoDesplegado;
@@ -26,17 +27,16 @@ public class homeTollsQA {
 
 
 
-    @FindBy(xpath = "//body[1]/div[1]/header[1]/a[1]/img[1]")
+    @FindBy(xpath = "//body[1]/div[2]/header[1]/a[1]/img[1]")
     private WebElement imgToolsQA;
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]")
+    @FindBy(xpath = "//body[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]")
     private WebElement botonElements;
-
 
 
     /** Entro a la Pagina y recorro***********************************************************************************************/
     public void paginaToolsqa() throws InterruptedException {
-        boolean imgtoolsqa = metodosGenericos.visualizarObjeto(imgToolsQA, 10);
+        boolean imgtoolsqa = metodosGenericos.visualizarObjeto(imgToolsQA, 5);
         if (imgtoolsqa) {
             Thread.sleep(400);
             imgToolsQA.click();
@@ -53,7 +53,7 @@ public class homeTollsQA {
 
     public void ElementsToolsQA() throws InterruptedException {
 
-        boolean elements = metodosGenericos.visualizarObjeto(botonElements, 10);
+        boolean elements = metodosGenericos.visualizarObjeto(botonElements, 5);
         if (elements) {
             Thread.sleep(400);
             botonElements.click();
@@ -62,7 +62,7 @@ public class homeTollsQA {
             Assert.assertTrue(true);
         } else {
             addWebReportImage("Agregar Elementos", "NO se Agregar Elementos", Status.FAIL, false);
-            System.out.println("No es  Posible realizar Click en Page ToolsQA");
+            System.out.println("No es  Posible realizar Click en Page Elements");
             Assert.assertTrue(false);
         }
 

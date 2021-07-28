@@ -23,7 +23,8 @@ public class elementsTollsQA {
 
 
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]")
+    //@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]")
+    @FindBy (id = "item-0")
     private WebElement botonTextBox;
 
     @FindBy(id = "userName")
@@ -45,9 +46,9 @@ public class elementsTollsQA {
 
     public void textBox() throws InterruptedException {
 
-        boolean textBox = metodosGenericos.visualizarObjeto(botonTextBox, 10);
+        boolean textBox = metodosGenericos.visualizarObjeto(botonTextBox, 5);
         if (textBox) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             botonTextBox.click();
             reporteObjetoDesplegado(true, "Se valida seccion administrador", "ambiente Admnistrador", false);
             addWebReportImage("text Box ", "text box", Status.PASS, false);
@@ -62,9 +63,9 @@ public class elementsTollsQA {
 
     public void formularioTextbox() throws InterruptedException {
 
-        boolean name = metodosGenericos.visualizarObjeto(txtFullName, 10);
+        boolean name = metodosGenericos.visualizarObjeto(txtFullName, 5);
         if (name) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             txtFullName.sendKeys("Rodrigo Espinoza Maltez");
             System.out.println("Se realiza Ingreso de Full Name");
             addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.PASS, false);
@@ -78,9 +79,9 @@ public class elementsTollsQA {
         }
 
 
-        boolean email = metodosGenericos.visualizarObjeto(txtEmailTB, 10);
+        boolean email = metodosGenericos.visualizarObjeto(txtEmailTB, 5);
         if (email) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             txtEmailTB.sendKeys("rodrigo.espinoza.maltez@ciisa.cl");
             System.out.println("Se realiza Ingreso de Email");
             reporteObjetoDesplegado(true, "Se valida seccion administrador", "ambiente Admnistrador", false);
@@ -93,9 +94,9 @@ public class elementsTollsQA {
         }
 
 
-        boolean direccion = metodosGenericos.visualizarObjeto(txtDireccion, 10);
+        boolean direccion = metodosGenericos.visualizarObjeto(txtDireccion, 5);
         if (direccion) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             txtDireccion.sendKeys("Plaza de la dignidad sin numeroo");
             System.out.println("Se realiza Ingreso de Direccion");
             reporteObjetoDesplegado(true, "Se valida seccion administrador", "ambiente Admnistrador", false);
@@ -107,9 +108,9 @@ public class elementsTollsQA {
             Assert.assertTrue(false);
         }
 
-        boolean direccionperm = metodosGenericos.visualizarObjeto(txtDireccionPerm, 10);
+        boolean direccionperm = metodosGenericos.visualizarObjeto(txtDireccionPerm, 5);
         if (direccionperm) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             txtDireccionPerm.sendKeys("Plaza de la dignidad sin numero ex plaza italia o plaza Baquedano");
             reporteObjetoDesplegado(true, "Se valida seccion administrador", "ambiente Admnistrador", false);
             System.out.println("Se realiza Ingreso de Direccion Permanente");
@@ -121,11 +122,11 @@ public class elementsTollsQA {
             Assert.assertTrue(false);
         }
 
-       boolean submit = metodosGenericos.visualizarObjeto(botonSumit, 10);
+        boolean submit = metodosGenericos.visualizarObjeto(botonSumit, 5);
         if (submit) {
-            Thread.sleep(400);
+            Thread.sleep(200);
             botonSumit.click();
-            Thread.sleep(400);
+            Thread.sleep(200);
             System.out.println("Se realiza click en boton Sumit");
             reporteObjetoDesplegado(true, "Se valida seccion administrador", "ambiente Admnistrador", false);
             addWebReportImage("Agregar Instituciones", "Ingresar datos de acceso", Status.PASS, false);

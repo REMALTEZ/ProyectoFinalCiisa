@@ -21,7 +21,8 @@ public class radioButtonTollsQA {
 
 
 
-    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]")
+    //@FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]")
+    @FindBy (id = "item-2")
     private WebElement BotonRadioButton;
 
     @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/label[1]")
@@ -33,10 +34,9 @@ public class radioButtonTollsQA {
 
     public void radioButton(){
 
-        boolean radioButton = metodosGenericos.visualizarObjeto(BotonRadioButton, 10);
+        boolean radioButton = metodosGenericos.visualizarObjeto(BotonRadioButton, 5);
         if (radioButton) {
             BotonRadioButton.click();
-
             addWebReportImage("Radio Button ", "text box", Status.PASS, false);
             System.out.println("Se realiza click en opcion ChecBox del menu lateral izquierdo");
 
@@ -50,7 +50,7 @@ public class radioButtonTollsQA {
 
     public void formularioRadioButton() throws InterruptedException {
 
-        boolean opcionYes = metodosGenericos.visualizarObjeto(OptionYes, 10);
+        boolean opcionYes = metodosGenericos.visualizarObjeto(OptionYes, 5);
         if (opcionYes) {
             OptionYes.click();
             addWebReportImage("Radio Button ", "text box", Status.PASS, false);
@@ -62,7 +62,7 @@ public class radioButtonTollsQA {
 
         }
 
-        boolean opcionImpr = metodosGenericos.visualizarObjeto(OptionImpres, 10);
+        boolean opcionImpr = metodosGenericos.visualizarObjeto(OptionImpres, 5);
         if (opcionImpr) {
             Thread.sleep(400);
             OptionImpres.click();
