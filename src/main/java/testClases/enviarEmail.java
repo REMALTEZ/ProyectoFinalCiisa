@@ -19,9 +19,6 @@ public class enviarEmail {
         Date date = new Date();
         fecha = dateFormat.format(date);
 
-
-
-
         Email email = new Email();
         email.setDestinatario("rodrigo.e.maltez@gmail.com");
         email.setAsunto("Reporte Ejecucion de Pruebas Automatizadas");
